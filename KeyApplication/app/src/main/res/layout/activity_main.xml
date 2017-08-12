@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/gray"
+
+    tools:context="com.app.keydemo.MainActivity">
+
+    <Button
+        android:id="@+id/btn_add_car"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#15A0F5"
+        android:text="输入车牌"
+        android:textColor="#FFFFFF" />
+
+    <LinearLayout
+
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="#e7acac"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingBottom="15dp"
+            android:text="输入车辆信息"
+            android:textColor="#17446d"
+            android:textSize="26sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_license_input_boxes_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_car_license_inputbox1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/car_license_inputbox"
+                android:enabled="false"
+                android:gravity="center_horizontal|center_vertical"
+                android:maxLength="1"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/et_car_license_inputbox2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/car_license_inputbox"
+                android:enabled="false"
+                android:gravity="center_horizontal|center_vertical" />
+
+            <EditText
+                android:id="@+id/et_car_license_inputbox3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/car_license_inputbox"
+                android:enabled="false"
+                android:gravity="center_horizontal|center_vertical"
+                android:maxLength="1" />
+
+            <EditText
+                android:id="@+id/et_car_license_inputbox4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/car_license_inputbox"
+                android:enabled="false"
+                android:gravity="center_horizontal|center_vertical"
+                android:maxLength="1" />
+
+            <EditText
+                android:id="@+id/et_car_license_inputbox5"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/car_license_inputbox"
+                android:enabled="false"
+                android:gravity="center_horizontal|center_vertical"
+                android:maxLength="1" />
+
+            <EditText
+                android:id="@+id/et_car_license_inputbox6"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/car_license_inputbox"
+                android:enabled="false"
+                android:gravity="center_horizontal|center_vertical" />
+
+            <EditText
+                android:id="@+id/et_car_license_inputbox7"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/car_license_inputbox"
+                android:enabled="false"
+                android:gravity="center_horizontal|center_vertical"
+                android:maxLength="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_addcar_type_1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:background="#0068B7"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp"
+                android:text="小轿车"
+                android:textColor="@android:color/white"
+                android:textSize="22sp" />
+            <!--车辆类型：1、小车 2、越野-->
+            <Button
+                android:id="@+id/btn_addcar_type_2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_transparent_gray_border"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp"
+                android:text="越野车"
+                android:textColor="#9DA9B4"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/carID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="车牌号"
+            android:maxLength="7" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_car_license_inputbox_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ImageButton
+            android:id="@+id/cancel"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right"
+            android:layout_margin="10dp"
+            android:background="#00000000"
+            android:padding="10dp"
+            android:src="@drawable/to_down" />
+
+        <android.inputmethodservice.KeyboardView
+            android:id="@+id/keyboard_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="#F0EFF4"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:keyBackground="@android:color/white"
+            android:keyTextColor="#5E5E5E"
+            android:keyTextSize="18sp"
+            android:labelTextSize="18sp"
+            android:paddingTop="5dp"
+            android:shadowColor="#ffffff"
+            android:shadowRadius="0.0"
+            android:visibility="visible" />
+    </LinearLayout>
+</RelativeLayout>
+
+
